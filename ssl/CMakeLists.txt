@@ -54,7 +54,7 @@ set_target_properties( ssl PROPERTIES
 
 if( ANDROID )
   set_target_properties( ssl PROPERTIES OUTPUT_NAME "ssl_1_1" )
-elseif( MSVC )
+elseif( MSVC OR MINGW )
   if( CMAKE_SIZEOF_VOID_P EQUAL 8 )
     set_target_properties( ssl PROPERTIES OUTPUT_NAME "ssl-1_1-x64" )
   elseif( CMAKE_SIZEOF_VOID_P EQUAL 4 )
